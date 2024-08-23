@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Three Floating Sections</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div id="loginModal" class="modal">
+            <div class="overlay"></div>
+            <div class="modal-content">
+                <div loginDiv>
+                    <h2>Log in with 01edu</h2>
+                    <div class="input-container">
+                        <label for="email">Email/Username</label>
+                        <input type="text" id="email" name="email" required />
+                    </div>
+                    <div class="input-container">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                    </div>
+                    <div class="error" id="error"></div>
+                    <button type="button" id="loginBtn">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="hello" id="hello">Hello</div>
+        <div class="container">
+            <div class="section">
+                <h2>General info</h2>
+                <div class="info1">
+                    <p id="info1"></p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Skills</h2>
+                <svg
+                    height="80%"
+                    width="100%"
+                    viewBox="0 0 42 42"
+                    class="donut"
+                    id="donut"
+                >
+                    <circle
+                        class="donut-hole"
+                        cx="21"
+                        cy="21"
+                        r="16"
+                        fill="#fff"
+                        id="donut-hole"
+                    ></circle>
+                    <circle
+                        class="donut-ring"
+                        cx="21"
+                        cy="21"
+                        r="16"
+                        fill="transparent"
+                        stroke="#d2d3d4"
+                        stroke-width="3"
+                    ></circle>
+                    <g class="chart-text">
+                        <text
+                            x="50%"
+                            y="50%"
+                            id="chart-number"
+                            class="chart-number"
+                        >
+                            10
+                        </text>
+                        <text
+                            x="50%"
+                            y="50%"
+                            id="chart-label"
+                            class="chart-label"
+                        >
+                            Total
+                        </text>
+                    </g>
+                </svg>
+            </div>
+            <div class="section">
+                <h2>Monthly xp gain</h2>
+                <svg class="xp-graph" id="xp-graph"></svg>
+            </div>
+        </div>
+        <button type="button" id="logoutBtn">Log out</button>
+        <script src="index.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </body>
+</html>
